@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&family=Roboto&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #EFF1FF;
+    --bg-secundary: #8E9AAF;
+    --bg-heading: #CBC0D3;
+    --bg-spam: #FEEAFA;
+
+    --text-heading: #ffffff;
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-heading: 'Staatliches', cursive;
+    --ff-body: 'Palanquin', sans-serif;
+
+    font-size: 62.5%;
+}
+
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-primary);
+}
+
+
+header {
+    text-align: center;
+    background: var(--bg-secundary);
+    font-family: var(--bg-heading);
+
+    padding-bottom: 2.9rem;
+    padding-top: 3.2rem;
+}
+
+header h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg-heading);
+    color: var(--text-heading);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    height: 4.9rem;
+    font-weight: 400;
+    font-size: 4.0rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.575);
+
+    font-family: var(--ff-heading);
+}
+
+
+p {
+    padding: 0 3.2rem 0 3.2rem;
+    text-align: center;
+
+    font-size: 2.0rem;
+    font-weight: 400;
+    color: #23053A;
+
+    margin-top: 1.4rem;
+    margin-bottom: 6.3rem;
+}
+
+
+
+
+.box {
+    padding: 0 3.2rem 0 3.2rem;
+    display: grid;
+    gap: 2.2rem;
+}
+
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+main,
+img {
+    animation-name: topdown;
+    animation-duration: 700ms;
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    object-fit: contain;
+    transition-duration: 400ms;
+}
+
+span {
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+
+    background-color: var(--bg-spam);
+    border-radius: 2.0rem;
+    height: 3.5rem;
+    width: 11.2rem;
+    font-family: var(--ff-heading);
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 5.0rem;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media(min-width:900px) {
+    body {
+        background-color: #ffffff;
+    }
+
+
+    .all {
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+
+    .top-box {
+        background-color: var(--bg-secundary);
+        height: 720px;
+        width: 377px;
+
+
+
+
+    }
+
+    header h2 {
+        font-size: 48px;
+
+    }
+
+    header img {
+        height: 167px;
+        width: 214.4px;
+
+    }
+
+
+
+    .box {
+        background-color: #ffffff;
+
+        display: grid;
+        align-items: flex-start;
+
+        padding-top: 64px;
+        padding-bottom: 50px;
+        padding-right: 80px;
+
+        grid-template-areas:
+            "A B C"
+            "D B E"
+            "D F E";
+    }
+
+
+    .box div:nth-child(1) {
+        grid-area: A;
+    }
+
+    .box div:nth-child(2) {
+        grid-area: B;
+    }
+
+    .box div:nth-child(3) {
+        grid-area: F;
+    }
+
+    .box div:nth-child(4) {
+        grid-area: D;
+    }
+
+    .box div:nth-child(5) {
+        grid-area: C;
+        opacity: 1;
+    }
+
+    .box div:nth-child(6) {
+        grid-area: E;
+        opacity: 1;
+    }
+
+    span {
+        opacity: 0;
+    }
+
+    p {
+        background-color: var(--bg-secundary);
+        font-family: var(--ff-roboto);
+        color: #FFFFFF;
+        font-size: 24px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+
+}
